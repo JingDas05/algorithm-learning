@@ -1,4 +1,4 @@
-package jingda.algo.graph;
+package jingda.algo.search.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
