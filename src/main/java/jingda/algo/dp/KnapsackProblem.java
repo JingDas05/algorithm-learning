@@ -1,8 +1,8 @@
 package jingda.algo.dp;
 
 /**
- *
  * 在O(nW)的时间复杂度内解决背包问题，其中n为物品的数量，W为背包的容量
+ *
  */
 public class KnapsackProblem {
     public static int knapsack(int[] weights, int[] values, int W) {
@@ -28,12 +28,12 @@ public class KnapsackProblem {
     }
 
 
-    /**                         w
+    /**                    weight
      *              0  1  2  3  4  5  6  7  8
      *           0  0  0  0  0  0  0  0  0  0
      *           1  0  3  3  3  3  3  3  3  3
      *           2  0  3  4  4  7  7  7  7  7
-     *     i     3  0  0  3  4  5  7  8  9  9
+     *    goods  3  0  0  3  4  5  7  8  9  9
      *           4  0  0  3  4  5  7  8  9  10
      *
      */
