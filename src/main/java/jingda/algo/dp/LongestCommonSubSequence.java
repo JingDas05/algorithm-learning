@@ -15,9 +15,22 @@ public class LongestCommonSubSequence {
         int[][] lcsDp = new int[aLength + 1][bLength + 1];
         StringBuilder stringBuilder = new StringBuilder();
 
-        // dp的存储长度要比实际维度（字符串长度）+1
-        // 字符串在dp中的存储是从下标1开始的，注意这个地方是 <=
-        // i 和 j分别代表字符串对应i和j位置上的字符串，读取字符时位置是 i-1 或者 j-1
+        /*
+         * dp的存储长度要比实际维度（字符串长度）+1
+         * 字符串在dp中的存储是从下标1开始的，注意这个地方是 <=
+         * i 和 j分别代表字符串对应i和j位置上的字符串，读取字符时位置是 i-1 或者 j-1
+         *
+         * 遍历方向是正向
+         *
+         *             j
+         * - - - - - - - - - - - - ->
+         * - - - - - - - - - - - - ->
+         * - - - - - - - - - - - - ->
+   i     * - - - - - - - - - - - - ->
+         * - - - - - - - - - - - - ->
+         * - - - - - - - - - - - - ->
+         * - - - - - - - - - - - - ->
+         * */
         for (int i = 1; i <= aLength; i++) {
             for (int j = 1; j <= bLength; j++) {
                 if (a.charAt(i - 1) == b.charAt(j - 1)) {
