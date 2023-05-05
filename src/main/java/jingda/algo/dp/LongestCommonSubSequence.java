@@ -50,18 +50,17 @@ public class LongestCommonSubSequence {
         String a = "ABCDGH";
         String b = "AEDFHR";
 
-        /*
-         *        A B C D G H
-         *      0 1 2 3 4 5 6
-         *    0 0 0 0 0 0 0 0
-         *  A 1 0 1 1 1 1 1 1
-         *  E 2 0 1 1 1 1 1 1
-         *  D 3 0 1 1 1 2 2 2
-         *  F 4 0 2 2 2 2 2 2
-         *  H 5 0 2 2 2 2 2 3
-         *  R 6 0 3 3 3 3 3 3
+        /*              j
+         *         A B C D G H
+         *
+         *       0 0 0 0 0 0 0
+         *   A   0 1 1 1 1 1 1
+         *   E   0 1 1 1 1 1 1
+         * i D   0 1 1 1 2 2 2
+         *   F   0 2 2 2 2 2 2
+         *   H   0 2 2 2 2 2 3
+         *   R   0 3 3 3 3 3 3
          */
-
         LongestCommonSubSequence longestCommonSubSequence = new LongestCommonSubSequence();
         int lcs = longestCommonSubSequence.lcs(a, b);
         System.out.println("lcs = " + lcs);
